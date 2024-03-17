@@ -25,27 +25,31 @@ export default {
     links: [
       {
         link: '',
+        name: 'about',
         text: {
           ru: 'О себе',
           en: 'About me'
         }
       },
       {
-        link: '/skills',
+        link: 'skills',
+        name: 'skills',
         text: {
           ru: 'Умения и навыки',
           en: 'Skills'
         }
       },
       {
-        link: '/projects',
+        link: 'projects',
+        name: 'projects',
         text: {
           ru: 'Мои работы',
           en: 'My projects'
         }
       },
       {
-        link: '/offers',
+        link: 'offers',
+        name: 'offers',
         text: {
           ru: 'Клиентам и партнерам',
           en: 'Offers'
