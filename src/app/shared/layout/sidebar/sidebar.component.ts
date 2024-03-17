@@ -24,9 +24,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     });
 
     this.sidebarItems = config.sidebar.links;
-  }
 
-  ngAfterViewInit(): void {
     this.utilService.isComponentActive$.subscribe((value: string): void => {
       if (this.navItems) {
         Array.from(this.navItems.nativeElement.children).forEach(elem => {
@@ -35,6 +33,10 @@ export class SidebarComponent implements OnInit, AfterViewInit {
         });
       }
     });
+  }
+
+  ngAfterViewInit(): void {
+
     this.utilService.language$.subscribe((value: string): void => {
       this.slogan.nativeElement.innerHTML = value === 'ru'? config.sidebar.slogan.ru : config.sidebar.slogan.en;
       this.available.nativeElement.innerText = value === 'ru'? config.sidebar.available.ru : config.sidebar.available.en;

@@ -5,7 +5,7 @@ import {BehaviorSubject, Subject} from "rxjs";
   providedIn: 'root'
 })
 export class UtilService {
-  isComponentActive$: Subject<string> = new Subject<string>();
+  isComponentActive$: BehaviorSubject<string> = new BehaviorSubject<string>(' ');
   findProject$: BehaviorSubject<string> = new BehaviorSubject('');
   language$: BehaviorSubject<string> = new BehaviorSubject('ru');
   theme$: BehaviorSubject<boolean> = new BehaviorSubject(false);
