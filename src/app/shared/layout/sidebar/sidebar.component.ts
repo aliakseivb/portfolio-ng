@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {UtilService} from "../../../services/util.service";
 import config from "../../../../config/config";
+import {environment} from "../../../../environments/environment";
 
 @Component({
   selector: 'sidebar',
@@ -13,15 +14,19 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   @ViewChild('available') available!: ElementRef;
   sidebarItems: { link: string, text: { ru: string, en: string } }[] = [];
   language: string = '';
-
+  hostLink: string = environment.href;
 
   constructor(private utilService: UtilService) {
   }
 
   ngOnInit(): void {
+
+
     this.utilService.getLanguage().subscribe(data => {
       this.language = data;
     });
+
+
 
     this.sidebarItems = config.sidebar.links;
 
@@ -54,4 +59,5 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   //     this.router.navigate([''])
   //   }
   // }
+  // etActiveLink($event)
 }

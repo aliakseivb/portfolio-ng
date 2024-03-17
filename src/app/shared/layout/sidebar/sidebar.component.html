@@ -10,7 +10,7 @@
         <li class="nav__item"
             *ngFor="let linkItem of sidebarItems">
           <a class="nav__item_link"
-             routerLink="{{linkItem.link}}">{{ language === 'ru'?  linkItem.text.ru : linkItem.text.en}}</a>
+             routerLink="{{hostLink}}{{linkItem.link}}">{{ language === 'ru'?  linkItem.text.ru : linkItem.text.en}}</a>
         </li>
       </ul>
     </nav>
