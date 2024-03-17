@@ -1,0 +1,13 @@
+<section class="projects">
+  <h2 class="title">{{pageTitle}}</h2>
+  <div class="projects__items">
+    <div class="project__item_wrap" *ngFor="let project of projects">
+    <a data-name="{{project.keyWords}}" class="projects__item" href="{{project.outerLink}}" target="_blank">
+      <h3 class="projects__item_title">{{project.title}}</h3>
+      <div class="projects__item_image">
+        <img src="./assets/images/projects/{{project.image}}" alt="{{project.title}}" class="projects__item_img">
+      </div>
+    </a>
+  </div>
+  </div>
+</section>

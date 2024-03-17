@@ -1,0 +1,43 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+.about {
+  .title {
+    @include title40();
+  }
+
+  .sub-title {
+    @include sub-title;
+    margin-bottom: 50px;
+  }
+
+  .anime-text {
+    display: flex;
+    align-items: flex-end;
+    @include title40();
+
+    span {
+      margin-right: 20px;
+    }
+
+    .typing {
+      @include sub-title;
+    }
+  }
+
+  .presentation__text {
+    font-family: Montserrat-SemiBold, sans-serif;
+    font-size: 38px;
+    color: $light-color;
+    text-align: justify;
+  }
+  .anime-text-red {
+    margin-top: 100px;
+    @include sub-title;
+    color: $extra-color;
+    height: 40px;
+  }
+
+
+}
+
