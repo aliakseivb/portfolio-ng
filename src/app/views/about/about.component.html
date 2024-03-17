@@ -1,0 +1,21 @@
+<section class="about">
+
+  <h1 class="title">{{language === 'ru'? aboutItems.title.ru: aboutItems.title.en}}</h1>
+  <div class="sub-title">{{language === 'ru'? aboutItems.subTitle.ru: aboutItems.subTitle.en}}</div>
+  <div class="anime-text"><span>{{language === 'ru'? aboutItems.animeText.ru : aboutItems.animeText.en}}</span>
+    <ngx-typed-js
+      [strings]="language === 'ru'? aboutItems.animeArr.ru : aboutItems.animeArr.en" [backDelay]="1000"
+      [startDelay]="1000" [typeSpeed]="100" [fadeOut]="true" [loop]="true" [showCursor]="false">
+      <span class="typing"></span></ngx-typed-js>
+  </div>
+
+
+  <div class="presentation__text" [innerHTML]="language === 'ru'? aboutItems.presentation.ru : aboutItems.presentation.en">
+  </div>
+  <div class="anime-text-red">
+    <ngx-typed-js
+      [strings]="language === 'ru'? aboutItems.animeTextRed.ru : aboutItems.animeTextRed.en" [backDelay]="1000"
+      [startDelay]="500" [typeSpeed]="20" [fadeOut]="true" [loop]="true" [showCursor]="false">
+      <span class="typing"></span></ngx-typed-js>
+  </div>
+</section>

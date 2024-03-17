@@ -1,0 +1,11 @@
+<section class="offer">
+  <h2 class="title">Клиентам и партнерам</h2>
+  <div class="offer__items">
+    <div class="offer__item" *ngFor="let offerItem of offerItems">
+      <div class="offer__item_image" style="background-image: url('../../../assets/images/offer/{{offerItem.image}}')">
+      </div>
+      <div class="offer__item_info" [innerHTML]="language === 'ru'? offerItem.info.ru:offerItem.info.en"></div>
+    </div>
+  </div>
+    <div class="offer__desc" [innerHTML]="language === 'ru'? offer!.desc.ru:offer!.desc.en"></div>
+</section>
