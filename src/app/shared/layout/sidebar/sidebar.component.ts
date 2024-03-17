@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {UtilService} from "../../../services/util.service";
 import config from "../../../../config/config";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'sidebar',
@@ -15,7 +16,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   language: string = '';
 
 
-  constructor(private utilService: UtilService) {
+  constructor(private utilService: UtilService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -26,6 +27,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     this.sidebarItems = config.sidebar.links;
 
     this.utilService.isComponentActive$.subscribe((value: string): void => {
+      console.log(this.router.url)
       if (this.navItems) {
         Array.from(this.navItems.nativeElement.children).forEach(elem => {
           (elem as HTMLElement).classList.remove('active');
