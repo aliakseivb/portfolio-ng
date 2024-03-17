@@ -1,0 +1,14 @@
+<section class="skills" [class.dark]="themeDark">
+  <div class="title" #title>{{pageTitle}}</div>
+  <div class="skills__items">
+    <div class="skills__item" *ngFor="let skill of skillsItems">
+      <div class="skills__item_image">
+        <img src="./assets/images/skills/{{skill.image}}" alt="{{skill.name}}" class="skills__item_img">
+      </div>
+      <div class="skills__desc">
+        {{language === 'ru'? skill.text.ru :  skill.text.en}}
+      </div>
+      <a class="skills__more" href="{{skill.outerLink}}" target="_blank">{{readMore}}</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,199 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/fonts";
+
+
+.header {
+  position: relative;
+  margin-top: 50px;
+  background-color: $common-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px 30px 550px;
+  height: 100px;
+  box-shadow: 0 0 11px 3px rgb(255 255 255 / 75%);
+  z-index: 1;
+
+  .header-search {
+    width: 400px;
+    padding: 10px 15px;
+    background: rgb(239, 239, 245);
+    border-radius: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-right: 50px;
+    position: relative;
+
+    .header-search-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-style: none;
+      width: 30px;
+      //cursor: pointer;
+
+      //svg.search-item path {
+      //  transition: .2s;
+      //}
+
+      //&:hover svg path {
+      //  fill: #000000;
+      //}
+    }
+
+    .help {
+      padding: 10px;
+      opacity: 0;
+      position: absolute;
+      top: 115%;
+      left: 10%;
+      z-index: -1;
+      font-family: Montserrat-Regular, sans-serif;
+      font-size: 18px;
+      width: 60%;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      transition: .7s;
+
+      .square {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        rotate: 45deg;
+        opacity: 0;
+        z-index: -1;
+        box-sizing: border-box;
+        top: -11px;
+        left: 30px;
+        background-color: $light-color;
+        border: 1px solid #3a0505;
+        border-right: none;
+        border-bottom: none;
+      }
+    }
+
+    .header-search-input {
+      margin-left: 10px;
+      padding-left: 10px;
+      width: 100%;
+      border-style: none;
+      outline: 0;
+      background-color: transparent;
+      font-family: Montserrat-Medium, sans-serif;
+      font-size: 26px;
+      color: $extra-color;
+
+      &::placeholder {
+        font-weight: normal;
+      }
+
+      &:hover + .help {
+        opacity: 80;
+        z-index: 4;
+        background-color: $light-color;
+        border-color: $extra-color;
+
+        .square {
+          opacity: 80;
+          z-index: 5;
+        }
+      }
+    }
+
+  }
+
+  .extra-action {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    .languages {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $bg-color;
+      cursor: pointer;
+      font-family: Montserrat-SemiBold, sans-serif;
+      font-size: 30px;
+
+      .lang-line {
+        height: 30px;
+        width: 5px;
+        background: $light-color;
+        margin: 0 10px;
+      }
+
+      .active {
+        color: #ffffff;
+      }
+    }
+
+    .switch-theme {
+      margin-left: 50px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100px;
+      min-width: 100px;
+      height: 50px;
+      border-radius: 30px;
+      padding: 10px 9px;
+      border: 1px solid #ffffff;
+      box-sizing: border-box;
+
+      .time {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        z-index: 2;
+
+        svg {
+          width: 100%;
+          max-height: 100%;
+          z-index: 1;
+        }
+      }
+
+      .switch-circle {
+        position: absolute;
+        width: 50px;
+        min-width: 50px;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #ffffff;
+        top: 0;
+        left: 0;
+        transition: .5s linear;
+      }
+
+      .switch-circle.light {
+        animation: moveLeft .5s linear;
+        animation-fill-mode: forwards;
+      }
+
+      .switch-circle.dark {
+        animation: moveRight .5s linear;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes moveLeft {
+        from {
+          transform: translateX(50px);
+        }
+        to {
+          transform: translateX(0px);
+        }
+      }
+      @keyframes moveRight {
+        to {
+          transform: translateX(50px);
+        }
+      }
+    }
+  }
+}

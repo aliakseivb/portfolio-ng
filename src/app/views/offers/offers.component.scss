@@ -1,0 +1,30 @@
+@import "../../../assets/styles/mixins";
+@import "../../../assets/styles/variables";
+
+.offer {
+  .title {
+    @include title40;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+
+  .offer__items {
+    display: grid;
+    grid-template-columns: 47% 47%;
+    gap: 20px;
+    margin-bottom: 7vb;
+    justify-content: space-between;
+
+    .offer__item {
+      .offer__item_image {
+        width: 20%;
+        height: 40%;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: center center;
+        float: left;
+        margin: 0 2vb 1vb 0;
+      }
+    }
+  }
+}
