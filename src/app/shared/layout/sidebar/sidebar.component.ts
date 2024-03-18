@@ -32,7 +32,7 @@ export class SidebarComponent implements OnInit, AfterViewInit {
       if (this.navItems) {
         Array.from(this.navItems.nativeElement.children).forEach(elem => {
           (elem as HTMLElement).classList.remove('active');
-          (elem as HTMLElement).children[0].getAttribute('href') === value ? (elem as HTMLElement).classList.add('active') : null;
+          this.router.url.includes((elem as HTMLElement).children[0].getAttribute('name')!)? (elem as HTMLElement).classList.add('active') : null;
         });
       }
     });

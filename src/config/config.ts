@@ -390,10 +390,9 @@ export default {
   },
   layout:
     {
-      about: 'back_1.jpg',
-      skills: 'back_2.jpg',
+      about: 'back_2.jpg',
+      skills: 'back_1.jpg',
       projects: 'back_3.jpg',
       offers: 'back_4.jpg'
     }
-
 }
