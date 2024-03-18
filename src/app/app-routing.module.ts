@@ -5,11 +5,12 @@ import {SkillsComponent} from "./views/skills/skills.component";
 import {ProjectsComponent} from "./views/projects/projects.component";
 import {OffersComponent} from "./views/offers/offers.component";
 
-const routes: Routes = [
-    {path: '', component: AboutComponent},
+const routes: Routes =
+  [
+    {path: 'about', component: AboutComponent},
     {path: 'skills', component: SkillsComponent},
     {path: 'projects', component: ProjectsComponent},
-    {path: 'offers', component: OffersComponent},
+    {path: 'offers', component: OffersComponent}
   ]
 ;
 

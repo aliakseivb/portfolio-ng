@@ -24,8 +24,7 @@ export default {
     },
     links: [
       {
-        link: '',
-        name: 'about',
+        link: 'about',
         text: {
           ru: 'О себе',
           en: 'About me'
@@ -33,7 +32,6 @@ export default {
       },
       {
         link: 'skills',
-        name: 'skills',
         text: {
           ru: 'Умения и навыки',
           en: 'Skills'
@@ -41,7 +39,6 @@ export default {
       },
       {
         link: 'projects',
-        name: 'projects',
         text: {
           ru: 'Мои работы',
           en: 'My projects'
@@ -49,7 +46,6 @@ export default {
       },
       {
         link: 'offers',
-        name: 'offers',
         text: {
           ru: 'Клиентам и партнерам',
           en: 'Offers'
@@ -291,7 +287,7 @@ export default {
         '     The cost is negotiable. Deadlines are agreed upon and adhered to. Edits are discussed and made.\n' +
         '     Bugs/shortcomings are corrected/edited/not financially burdened in a timely manner.\n' +
         '     <br><br><br>\n' +
-        '     I\'m catching up | I WILL PROGRAM | SETTING ADAPTIVE\n' +
+        '     I\'M CATCHING UP | I WILL PROGRAM | SETTING ADAPTIVE\n' +
         '     <br><br><br>\n' +
         '     Your website will be beautiful and convenient.'
     },
@@ -391,5 +387,13 @@ export default {
         '       <span class="change red">BUSINESS</span>\n' +
         '     </p>'
     }
-  }
+  },
+  layout:
+    {
+      about: 'back_1.jpg',
+      skills: 'back_2.jpg',
+      projects: 'back_3.jpg',
+      offers: 'back_4.jpg'
+    }
+
 }

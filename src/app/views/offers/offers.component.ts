@@ -1,7 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {UtilService} from "../../services/util.service";
 import {Router} from "@angular/router";
-import {SkillType} from "../../../types/skill.type";
 import config from "../../../config/config";
 import {OfferType} from "../../../types/offer.type";
 

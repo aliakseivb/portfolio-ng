@@ -20,6 +20,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.router.navigate(['about']);
+
     this.utilService.getLanguage().subscribe(data => {
       this.language = data;
     });
@@ -27,7 +29,6 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     this.sidebarItems = config.sidebar.links;
 
     this.utilService.isComponentActive$.subscribe((value: string): void => {
-      console.log(this.router.url)
       if (this.navItems) {
         Array.from(this.navItems.nativeElement.children).forEach(elem => {
           (elem as HTMLElement).classList.remove('active');
@@ -38,22 +39,9 @@ export class SidebarComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-
     this.utilService.language$.subscribe((value: string): void => {
       this.slogan.nativeElement.innerHTML = value === 'ru'? config.sidebar.slogan.ru : config.sidebar.slogan.en;
       this.available.nativeElement.innerText = value === 'ru'? config.sidebar.available.ru : config.sidebar.available.en;
     });
   }
-
-  // changeActiveComponent(event: Event) {
-  //   console.log(event)
-  //   if (this.navItems) {
-  //     Array.from(this.navItems.nativeElement.children).forEach(elem => {
-  //       (elem as HTMLElement).children[0].classList.remove('active');
-  //       console.log((elem as HTMLElement))
-  //     });
-  //
-  //     this.router.navigate([''])
-  //   }
-  // }
 }

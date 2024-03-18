@@ -76,18 +76,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     else {
       this.findProjects(this.searchValue);
     }
-
-    // if((this.search.nativeElement as HTMLInputElement).value.length < 3){
-    //   this.utilService.setFindProjectString('');
-    // }
-    //
-    // this.search.nativeElement.addEventListener('keydown', (e: KeyboardEvent) => {
-    //   if (e.key === 'Enter') {
-    //     this.findProjects((this.search.nativeElement as HTMLInputElement).value)
-    //   }else {
-    //
-    //   }
-    // });
   }
 
   changeLanguage(event: Event) {

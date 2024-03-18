@@ -7,59 +7,90 @@ body {
   font-family: Montserrat-Regular, sans-serif;
   user-select: none;
   box-sizing: border-box;
-  //background: url("../images/content/back_1.jpg") no-repeat center;
-  background-size: cover;
   max-height: 100vh;
   min-height: 100vh;
 
-  app-root {
+  app-component {
     //height: 100vh;
     .layout {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 100vh;
-      background: $bg-color;
+      //background: url("../images/content/back_1.jpg") no-repeat center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      //background-color: $bg-color;
 
-      .offer__item_info {
-        display: inline;
-        font-size: 2vh;
-        text-align: justify;
-        color: $extra-color;
-
-        .offer__item_info-title {
-          margin-bottom: 30px;
-          font-size: 2.5vb;
-          font-weight: bolder;
-        }
-
-        p:last-child {
-          margin-top: 20px;
-        }
+      .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: $bg-color;
+        opacity: 90%;
+        z-index: 1;
       }
 
-      .offer__desc {
-        font-size: 2.5vb;
-        color: $light-color;
-
-        p:first-child {
-          font-size: 3vb;
-          margin-bottom: 50px;
-          font-weight: bolder;
-        }
-
-        span {
-          margin-right: 10px;
-        }
-
-        .red {
+      .content {
+        flex-grow: 1;
+        padding: 100px 100px 50px 600px;
+        position: relative;
+        z-index: 3;
+        .offer__item_info {
+          display: inline;
+          font-size: 2vh;
+          text-align: justify;
           color: $extra-color;
-          font-weight: bold;
+
+          .offer__item_info-title {
+            margin-bottom: 30px;
+            font-size: 2.5vb;
+            font-weight: bolder;
+          }
+
+          p:last-child {
+            margin-top: 20px;
+          }
+        }
+
+        .offer__desc {
+          font-size: 2.5vb;
+          color: $light-color;
+
+          p:first-child {
+            font-size: 3vb;
+            margin-bottom: 50px;
+            font-weight: bolder;
+          }
+
+          span {
+            margin-right: 10px;
+          }
+
+          .red {
+            color: $extra-color;
+            font-weight: bold;
+          }
         }
       }
+
+
+
 
       &.dark {
-        background: #343434;
+        .background {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: #343434;
+          opacity: 90%;
+          z-index: 1;
+        }
 
         .header {
           background-color: $dark-color;
@@ -102,7 +133,7 @@ body {
                 left: -1em;
                 width: 100%;
                 height: 100%;
-                background: linear-gradient(to right, rgba(187, 186, 186, 0), #343434, rgba(180, 177, 177, 0)) no-repeat -5em 0%;
+                background: linear-gradient(to right, rgba(187, 186, 186, 0), #2f2f2f, rgba(180, 177, 177, 0)) no-repeat -5em 0%;
                 background-size: 2em 100%;
                 transform: skewX(-50deg);
                 z-index: 4;
@@ -123,10 +154,12 @@ body {
             .offer__item_info-title {
               color: $light-color;
             }
+
             p {
               color: $bg-color;
             }
           }
+
           .offer__item_info {
             display: inline;
             font-size: 2vh;
