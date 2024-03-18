@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat-Regular, sans-serif;
+  user-select: none;
+  box-sizing: border-box;
+  max-height: 100vh;
+  min-height: 100vh;
+
+  app-component {
+    //height: 100vh;
+    .layout {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+      //background: url("../images/content/back_1.jpg") no-repeat center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      //background-color: $bg-color;
+
+      .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: $bg-color;
+        opacity: 90%;
+        z-index: 1;
+      }
+
+      .content {
+        flex-grow: 1;
+        padding: 100px 100px 50px 600px;
+        position: relative;
+        z-index: 3;
+        .offer__item_info {
+          display: inline;
+          font-size: 2vh;
+          text-align: justify;
+          color: $extra-color;
+
+          .offer__item_info-title {
+            margin-bottom: 30px;
+            font-size: 2.5vb;
+            font-weight: bolder;
+          }
+
+          p:last-child {
+            margin-top: 20px;
+          }
+        }
+
+        .offer__desc {
+          font-size: 2.5vb;
+          color: $light-color;
+
+          p:first-child {
+            font-size: 3vb;
+            margin-bottom: 50px;
+            font-weight: bolder;
+          }
+
+          span {
+            margin-right: 10px;
+          }
+
+          .red {
+            color: $extra-color;
+            font-weight: bold;
+          }
+        }
+      }
+
+
+
+
+      &.dark {
+        .background {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          background-color: #343434;
+          opacity: 90%;
+          z-index: 1;
+        }
+
+        .header {
+          background-color: $dark-color;
+        }
+
+        .footer {
+          background-color: $dark-color;
+        }
+
+        .sidebar {
+          background-color: $dark-color;
+        }
+
+        .content {
+          .sub-title {
+            color: $bg-color;
+          }
+
+          .about {
+            .anime-text {
+              .typing {
+                color: #ad1414;
+              }
+            }
+
+            .anime-text-red {
+              margin-top: 100px;
+              @include sub-title;
+              color: #ad1414;
+              height: 40px;
+            }
+          }
+
+          .skills {
+            .title {
+              &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -1em;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, rgba(187, 186, 186, 0), #2f2f2f, rgba(180, 177, 177, 0)) no-repeat -5em 0%;
+                background-size: 2em 100%;
+                transform: skewX(-50deg);
+                z-index: 4;
+              }
+
+              &.hover:after {
+                transition: 1s linear;
+                background-position: 80% 20%;
+              }
+            }
+          }
+
+          .projects__item_title {
+            color: $bg-color;
+          }
+
+          .offer__item_info {
+            .offer__item_info-title {
+              color: $light-color;
+            }
+
+            p {
+              color: $bg-color;
+            }
+          }
+
+          .offer__item_info {
+            display: inline;
+            font-size: 2vh;
+            text-align: justify;
+            color: #ad1414;
+
+            .offer__item_info-title {
+              margin-bottom: 30px;
+              font-size: 2.5vb;
+              font-weight: bolder;
+            }
+
+            p:last-child {
+              margin-top: 20px;
+            }
+          }
+
+          .offer__desc {
+            font-size: 2.5vb;
+            color: $light-color;
+
+            p:first-child {
+              font-size: 3vb;
+              margin-bottom: 50px;
+              font-weight: bolder;
+            }
+
+            span {
+              margin-right: 10px;
+            }
+
+            .red {
+              color: #ad1414;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
