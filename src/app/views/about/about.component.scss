@@ -3,39 +3,268 @@
 
 .about {
   .title {
-    @include title40();
+    @include title50;
   }
 
   .sub-title {
-    @include sub-title;
+    @include title40;
     margin-bottom: 50px;
   }
 
   .anime-text {
     display: flex;
-    align-items: flex-end;
-    @include title40();
+    align-items: center;
+    @include title50;
 
     span {
       margin-right: 20px;
     }
 
     .typing {
-      @include sub-title;
+      @include title40;
     }
   }
 
   .presentation__text {
     font-family: Montserrat-SemiBold, sans-serif;
-    font-size: 38px;
+    font-size: 1.7vb;
     color: $light-color;
     text-align: justify;
   }
   .anime-text-red {
+    display: block;
     margin-top: 100px;
-    @include sub-title;
+    @include title40;
     color: $extra-color;
     height: 40px;
   }
 }
 
+@media screen and (max-width: 1850px){
+  .about {
+    .presentation__text {
+      font-size: 1.5vb;
+    }
+    .anime-text-red {
+      font-size: 1.9vb;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px){
+  .about {
+    .anime-text-red {
+      font-size: 1.5vb;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .about {
+    .title {
+      font-size: 2.2vb;
+    }
+
+    .sub-title {
+      font-size: 1.8vb;
+    }
+
+    .anime-text {
+      font-size: 2.2vb;
+    }
+
+    .presentation__text {
+      font-size: 1.4vb;
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .about {
+    .title {
+      font-size: 2vb;
+    }
+
+    .sub-title {
+      font-size: 1.6vb;
+    }
+
+    .anime-text {
+      font-size: 2vb;
+    }
+
+    .presentation__text {
+      font-size: 1.3vb;
+    }
+    .anime-text-red {
+      font-size: 1.4vb;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .about {
+    .title {
+      font-size: 2vb;
+    }
+
+    .sub-title {
+      font-size: 1.8vb;
+    }
+
+    .anime-text {
+      font-size: 1.9vb;
+
+      .typing {
+        font-size: 1.8vb;
+      }
+    }
+
+    .presentation__text {
+      font-size: 1.7vb;
+    }
+    .anime-text-red {
+      span{
+        font-size: 1.8vb;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .about {
+    .title {
+      font-size: 2vb;
+    }
+
+    .sub-title {
+      font-size: 1.8vb;
+    }
+
+    .anime-text {
+      font-size: 1.8vb;
+    }
+
+    .presentation__text {
+      font-size: 1.7vb;
+    }
+    .anime-text-red {
+      font-size: 1.6vb;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+    .title {
+      font-size: 2vb;
+      margin-bottom: 30px;
+    }
+
+    .sub-title {
+      font-size: 1.8vb;
+      margin-bottom: 30px;
+    }
+
+    .anime-text {
+      font-size: 1.8vb;
+      margin-bottom: 30px;
+    }
+
+    .presentation__text {
+      font-size: 1.6vb;
+    }
+    .anime-text-red {
+      font-size: 1.6vb;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    .title {
+      font-size: 1.8vb;
+    }
+
+    .sub-title {
+      font-size: 1.6vb;
+    }
+
+    .anime-text {
+      font-size: 1.5vb;
+
+      .typing {
+        font-size: 1.5vb;
+      }
+    }
+
+    .presentation__text {
+      font-size: 1.5vb;
+    }
+
+    .anime-text-red {
+      font-size: 1.5vb;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about {
+    .title {
+      font-size: 1.6vb;
+      margin-bottom: 20px;
+    }
+
+    .sub-title {
+      font-size: 1.5vb;
+      margin-bottom: 20px;
+    }
+
+    .anime-text {
+      font-size: 1.5vb;
+      margin-bottom: 20px;
+      span {
+        margin-right: 10px;
+      }
+
+      .typing {
+        font-size: 1.4vb;
+      }
+    }
+
+    .presentation__text {
+      font-size: 1.3vb;
+    }
+    .anime-text-red {
+      span {
+        font-size: 1.4vb;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about {
+    .title {
+      font-size: 1.5vb;
+    }
+
+    .sub-title {
+      font-size: 1.4vb;
+    }
+
+    .anime-text {
+      font-size: 1.3vb;
+      margin-bottom: 30px;
+    }
+
+    .presentation__text {
+      font-size: 1.2vb;
+    }
+    .anime-text-red {
+      span {
+        font-size: 1.3vb;
+      }
+    }
+  }
+}

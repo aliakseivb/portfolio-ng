@@ -1,4 +1,4 @@
-<section class="sidebar">
+<section class="sidebar" [class.show]="showMenu" #sidebar>
   <div class="sidebar-top">
     <div class="sidebar__image">
       <img class="sidebar__image_img" src="./assets/images/sidebar/1.png" alt="I`m">
@@ -8,6 +8,7 @@
     <nav class="nav">
       <ul class="nav__items" #navItems>
         <li class="nav__item"
+            [class.active]="isActiveLink(linkItem.link)"
             *ngFor="let linkItem of sidebarItems">
           <a class="nav__item_link"
              data-[name]="linkItem.link"
@@ -19,7 +20,7 @@
   <div class="sidebar-down">
     <div class="sidebar__contacts">
       <div class="sidebar__contacts_title" #available>я доступен</div>
-      <div class="sidebar__contacts_items">
+      <div class="sidebar__contacts_items" #socials>
         <div class="sidebar__contacts_item">
           <a class="social-link" href="https://t.me/aliakseivb" target="_blank">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"

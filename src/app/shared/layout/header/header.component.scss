@@ -9,10 +9,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 50px 30px 550px;
-  height: 100px;
+  padding: 50px 50px 50px 600px;
   box-shadow: 0 0 11px 3px rgb(255 255 255 / 75%);
-  z-index: 1;
+  z-index: 4;
+
+  .burger {
+    display: none;
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  .header__image {
+    display: none;
+  }
 
   .header-search {
     width: 400px;
@@ -22,7 +35,6 @@
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-right: 50px;
     position: relative;
 
     .header-search-button {
@@ -31,15 +43,7 @@
       justify-content: center;
       border-style: none;
       width: 30px;
-      //cursor: pointer;
-
-      //svg.search-item path {
-      //  transition: .2s;
-      //}
-
-      //&:hover svg path {
-      //  fill: #000000;
-      //}
+      cursor: pointer;
     }
 
     .help {
@@ -89,8 +93,8 @@
       }
 
       &:hover + .help {
-        opacity: 80;
-        z-index: 4;
+        opacity: 100;
+        z-index: 6;
         background-color: $light-color;
         border-color: $extra-color;
 
@@ -100,7 +104,6 @@
         }
       }
     }
-
   }
 
   .extra-action {
@@ -116,6 +119,7 @@
       cursor: pointer;
       font-family: Montserrat-SemiBold, sans-serif;
       font-size: 30px;
+      margin: 0 50px;
 
       .lang-line {
         height: 30px;
@@ -130,7 +134,6 @@
     }
 
     .switch-theme {
-      margin-left: 50px;
       position: relative;
       display: flex;
       justify-content: space-between;
@@ -194,6 +197,172 @@
           transform: translateX(50px);
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .header {
+    padding: 50px 50px 50px 500px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .header {
+    padding: 50px 50px 50px 450px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .header {
+    margin-top: unset;
+    padding: 10px 20px 10px 20px;
+    flex-wrap: wrap;
+
+    .burger {
+      display: block;
+      cursor: pointer;
+      margin: 0 20px;
+
+      svg {
+        transition: .3s;
+      }
+
+      &:hover {
+        svg {
+          fill: $light-color;
+        }
+      }
+    }
+
+    .header__image {
+      display: block;
+      width: 100px;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: inset 0 0 20px 9px rgba($light-color, 0.75);
+      }
+    }
+
+    .header-search {
+      width: 200px;
+      padding: 0 10px;
+      .header-search-input {
+        font-size: 16px;
+        padding: 10px 10px;
+      }
+    }
+    .extra-action {
+      .languages {
+        margin: 0 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 20px 20px 20px;
+
+    .header__image {
+      display: flex;
+      justify-self: flex-end;
+      width: 80px;
+    }
+    .burger {
+      display: flex;
+      justify-self: flex-start;
+    }
+    .header-search {
+      width: 400px;
+      display: flex;
+      justify-self: flex-end;
+      order: 1;
+      .header-search-input {
+        font-size: 16px;
+        padding: 10px 10px;
+      }
+    }
+    .extra-action {
+      justify-content: flex-start;
+      .languages {
+        margin: 0 30px 0 0;
+        font-size: 26px;
+      }
+      .switch-theme {
+        width: 80px;
+        min-width: 80px;
+        height: 40px;
+        border-radius: 20px;
+        padding: 10px 9px;
+        border: 1px solid #ffffff;
+        box-sizing: border-box;
+
+        .time {
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          border-radius: 50%;
+          cursor: pointer;
+          z-index: 2;
+
+          svg {
+            width: 100%;
+            max-height: 100%;
+            z-index: 1;
+          }
+        }
+
+        .switch-circle {
+          position: absolute;
+          width: 40px;
+          min-width: 40px;
+          height: 100%;
+          border-radius: 50%;
+          background-color: #ffffff;
+          top: 0;
+          left: 0;
+          transition: .5s linear;
+        }
+
+        .switch-circle.light {
+          animation: moveLeft .5s linear;
+          animation-fill-mode: forwards;
+        }
+
+        .switch-circle.dark {
+          animation: moveRight .5s linear;
+          animation-fill-mode: forwards;
+        }
+
+        @keyframes moveLeft {
+          from {
+            transform: translateX(40px);
+          }
+          to {
+            transform: translateX(0px);
+          }
+        }
+        @keyframes moveRight {
+          to {
+            transform: translateX(40px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .header {
+    .header__image {
+      width: 60px;
     }
   }
 }

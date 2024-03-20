@@ -9,6 +9,7 @@ export class UtilService {
   findProject$: BehaviorSubject<string> = new BehaviorSubject('');
   language$: BehaviorSubject<string> = new BehaviorSubject('ru');
   theme$: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  showMenu$: BehaviorSubject<boolean> = new BehaviorSubject(false);
   constructor() { }
 
   setIsComponentActive(value: string): void {
@@ -25,5 +26,9 @@ export class UtilService {
 
   setTheme(val: boolean): void {
     this.theme$.next(val);
+  }
+
+  setShowMenu(val: boolean){
+    this.showMenu$.next(val);
   }
 }

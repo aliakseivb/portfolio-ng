@@ -272,9 +272,9 @@ export default {
         '    <br><br>\n' +
         '    Стоимость - обсуждаема. Сроки - оговариваются и соблюдаются. Правки - обсуждаются и вносятся.\n' +
         '    Баги/недочеты - своевременно исправляются/редактируются/финансово не обременяются.\n' +
-        '    <br><br><br>\n' +
+        '    <br><br>\n' +
         '    СВЕРСТАЮ | ЗАПРОГРАММИРУЮ | НАСТРОЮ АДАПТИВ\n' +
-        '    <br><br><br>\n' +
+        '    <br><br>\n' +
         '    Ваш сайт будет красивым и удобным.',
       en: 'Hello!\n' +
         '     <br><br>Let\'s get to know each other! I\'m Alexey, an experienced frontend developer.\n' +
@@ -286,9 +286,9 @@ export default {
         '     <br><br>\n' +
         '     The cost is negotiable. Deadlines are agreed upon and adhered to. Edits are discussed and made.\n' +
         '     Bugs/shortcomings are corrected/edited/not financially burdened in a timely manner.\n' +
-        '     <br><br><br>\n' +
+        '     <br><br>\n' +
         '     I\'M CATCHING UP | I WILL PROGRAM | SETTING ADAPTIVE\n' +
-        '     <br><br><br>\n' +
+        '     <br><br>\n' +
         '     Your website will be beautiful and convenient.'
     },
     animeTextRed: {
@@ -307,91 +307,29 @@ export default {
       {
         image: 'client.svg',
         info: {
-          ru: '<p class="offer__item_info-title">\n' +
-            '          Я ценю Ваше время и Ваши средства\n' +
-            '        </p>\n' +
-            '        <p>\n' +
-            '          Уважаемые Клиенты, предлагая Вам свои услуги, я могу гарантировать добросовестное отношение к\n' +
-            '          выполнению заказа: соблюдение оговоренныx сроков и качество выполненной работы.\n' +
-            '        </p>\n' +
-            '        <p>\n' +
-            '          Обращаясь за моими услугами Вы получите комфортное сотрудничество и итоговый конкурентно-способный\n' +
-            '          продукт, не уступающий по качеству (внешний вид, функциональность, интерактивность) Вашим\n' +
-            '          предполагаемым конкурентам, что благоприятно отразится на Вашем бизнесе.\n' +
-            '        </p>',
-          en: '<p class="offer__item_info-title">\n' +
-            '           I appreciate your time and your funds\n' +
-            '         </p>\n' +
-            '         <p>\n' +
-            '           Dear Clients, offering you my services, I can guarantee a conscientious attitude towards\n' +
-            '           fulfillment of the order: compliance with the agreed deadlines and quality of work performed.\n' +
-            '         </p>\n' +
-            '         <p>\n' +
-            '           By applying for my services you will receive comfortable cooperation and a final competitive advantage.\n' +
-            '           a product that is not inferior in quality (appearance, functionality, interactivity) to yours\n' +
-            '           potential competitors, which will have a positive impact on your business.\n' +
-            '         </p>'
+          ru: '<div class="offer__item_info-title">Я ценю Ваше время и Ваши средства</div><p>Уважаемые Клиенты, предлагая Вам свои услуги, я могу гарантировать добросовестное отношение к выполнению заказа: соблюдение оговоренныx сроков и качество выполненной работы.<br><br>Обращаясь за моими услугами Вы получите комфортное сотрудничество и итоговый конкурентно-способный продукт, не уступающий по качеству (внешний вид, функциональность, интерактивность) Вашим предполагаемым конкурентам, что благоприятно отразится на Вашем бизнесе.</p>',
+          en: '<div class="offer__item_info-title">I appreciate your time and your funds</div><p>Dear Clients, offering you my services, I can guarantee a conscientious attitude towards fulfillment of the order: compliance with the agreed deadlines and quality of work performed.<br><br>By applying for my services you will receive comfortable cooperation and a final competitive advantage a product that is not inferior in quality (appearance, functionality, interactivity) to yours potential competitors, which will have a positive impact on your business.</p>'
         },
       },
       {
         image: 'partner.svg',
         info: {
-          ru: '<p class="offer__item_info-title">\n' +
-            '          Партнерство - это важно\n' +
-            '        </p>\n' +
-            '        <p class="">\n' +
-            '          Коллеги по web-разработке, а также стартап-проекты, готов предложить Вам свои услуги, а в долгосрочной\n' +
-            '          перспективе и партнерство на постоянной основе.\n' +
-            '        </p>\n' +
-            '        <p class="">\n' +
-            '          Порой говорят "не хватает рук". Если вы столкнулись с такой ситуацией, то я с радостью рассмотрю Ваши\n' +
-            '          предложения по взаимовыгодному сотрудничеству. Могу заверить, что мои знания и в некоторой степени\n' +
-            '          опыт, в совокупности с трудолюбием, поспособствуют нашему плодотворному совместному труду.\n' +
-            '          Я всегда открыт к общению и обсуждению любых коммерческих и производственных вопросов, которые могут\n' +
-            '          возникнуть в процессе нашей совместной деятельности.\n' +
-            '        </p>',
-          en: '<p class="offer__item_info-title">\n' +
-            '           Partnership is important\n' +
-            '         </p>\n' +
-            '         <p class="">\n' +
-            '           Colleagues in web development, as well as startup projects, are ready to offer you their services, and in the long term\n' +
-            '           perspective and partnership on an ongoing basis.\n' +
-            '         </p>\n' +
-            '         <p class="">\n' +
-            '           Sometimes they say “there are not enough hands.” If you are faced with such a situation, then I will be happy to consider your\n' +
-            '           proposals for mutually beneficial cooperation. I can assure you that my knowledge and to some extent\n' +
-            '           experience, combined with hard work, will contribute to our fruitful joint work.\n' +
-            '           I am always open to communication and discussion of any commercial and production issues that may\n' +
-            '           arise in the process of our joint activities.\n' +
-            '         </p>\n'
+          ru: '<div class="offer__item_info-title">Партнерство - это важно</div><p>Коллеги по web-разработке, а также стартап-проекты, готов предложить Вам свои услуги, а в долгосрочной перспективе и партнерство на постоянной основе.<br><br>Порой говорят "не хватает рук". Если вы столкнулись с такой ситуацией, то я с радостью рассмотрю Ваши предложения по взаимовыгодному сотрудничеству. Могу заверить, что мои знания и в некоторой степени опыт, в совокупности с трудолюбием, поспособствуют нашему плодотворному совместному труду. Я всегда открыт к общению и обсуждению любых коммерческих и производственных вопросов, которые могут возникнуть в процессе нашей совместной деятельности.</p>',
+          en: '<div class="offer__item_info-title">Partnership is important</div><p>Colleagues in web development, as well as startup projects, are ready to offer you their services, and in the long term perspective and partnership on an ongoing basis.<br><br>Sometimes they say “there are not enough hands.” If you are faced with such a situation, then I will be happy to consider your proposals for mutually beneficial cooperation. I can assure you that my knowledge and to some extent experience, combined with hard work, will contribute to our fruitful joint work. I am always open to communication and discussion of any commercial and production issues that may arise in the process of our joint activities.</p>'
         },
       }
     ],
     desc: {
       ru: '<p class="red">Все обсуждаемо и решаемо</p>\n' +
-        '    <p>\n' +
-        '      <span class="change">Порядочное сотрудничество и надежное партнерство = успешный</span>\n' +
-        '      <span class="change red">СТАРТ</span>\n' +
-        '      <span class="change"> = успешный</span>\n' +
-        '      <span class="change red">ПРОЕКТ</span>\n' +
-        '      <span class="change"> = успешный</span>\n' +
-        '      <span class="change red">БИЗНЕС</span>\n' +
-        '    </p>',
+        '    <p>Порядочное сотрудничество и надежное партнерство = успешный <span class="red">старт</span>= успешный <span class="red">проект</span>= успешный <span class="red">бизнес</span></p>',
       en: '<p class="red">Everything is discussed and decided</p>\n' +
-        '     <p>\n' +
-        '       <span class="change">Honest cooperation and reliable partnership = successful</span>\n' +
-        '       <span class="change red">START</span>\n' +
-        '       <span class="change"> = successful</span>\n' +
-        '       <span class="change red">PROJECT</span>\n' +
-        '       <span class="change"> = successful</span>\n' +
-        '       <span class="change red">BUSINESS</span>\n' +
-        '     </p>'
+        '     <p>Honest cooperation and reliable partnership = successful <span class="red">start</span> = successful <span class="red">project</span>= successful <span class="red">business</span></p>'
     }
   },
   layout:
     {
-      about: 'back_2.jpg',
-      skills: 'back_1.jpg',
+      about: 'back_1.jpg',
+      skills: 'back_2.jpg',
       projects: 'back_3.jpg',
       offers: 'back_4.jpg'
     }

@@ -4,7 +4,7 @@
 .skills {
   .title {
     text-align: center;
-    @include title40;
+    @include title50;
     position: relative;
 
     &:after {
@@ -32,11 +32,12 @@
     //flex-wrap: wrap;
     //gap: 20px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    column-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: auto;
+    column-gap: 1%;
     row-gap: 20px;
-    justify-content: center;
-    justify-self: center;
+    //justify-content: flex-start;
+    //justify-self: flex-start;
 
     .skills__item {
       max-width: 100%;
@@ -45,7 +46,7 @@
       justify-content: space-between;
       align-items: center;
       border-radius: 5px;
-      padding: 10px 30px 20px;
+      padding: 10px;
 
       .skills__item_image {
         width: 80%;
@@ -60,7 +61,7 @@
         padding: 0 20px;
         font-family: Montserrat-Regular, sans-serif;
         font-size: 22px;
-        color: $common-color;
+        color: rgba(255, 255, 255, 0.70);
         text-align: justify;
         display: flex;
         align-items: start;

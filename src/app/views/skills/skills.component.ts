@@ -1,15 +1,16 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {UtilService} from "../../services/util.service";
 import {Router} from "@angular/router";
 import config from "../../../config/config";
 import {SkillType} from "../../../types/skill.type";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements OnInit, AfterViewInit {
+export class SkillsComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('title') title: ElementRef | undefined;
 
   skillsItems: SkillType[] = config.skills.skillsItems;
@@ -17,23 +18,29 @@ export class SkillsComponent implements OnInit, AfterViewInit {
   readMore: string = '';
   language: string = '';
   themeDark: boolean = false;
+  private subs: Subscription = new Subscription();
   constructor(private utilService: UtilService, private router: Router) {
   }
 
   ngOnInit(): void {
-    this.utilService.language$.subscribe(lang => {
+    this.subs.add(this.utilService.language$.subscribe(lang => {
       this.language = lang;
       this.pageTitle = lang === 'ru' ? config.skills.pageTitle.ru : config.skills.pageTitle.en;
       this.readMore = lang === 'ru' ? config.skills.more.ru : config.skills.more.en;
-    });
-    this.utilService.theme$.subscribe(data => {
+    }));
+
+    this.subs.add(this.utilService.theme$.subscribe(data => {
       this.themeDark = data;
-    });
+    }));
   }
 
   ngAfterViewInit() {
     this.utilService.setIsComponentActive(this.router.url);
     this.glare();
+  }
+
+  ngOnDestroy() {
+    this.subs.unsubscribe();
   }
 
   glare() {

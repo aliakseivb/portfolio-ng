@@ -7,28 +7,26 @@ body {
   font-family: Montserrat-Regular, sans-serif;
   user-select: none;
   box-sizing: border-box;
-  max-height: 100vh;
-  min-height: 100vh;
+  min-height: 100%;
 
   app-component {
-    //height: 100vh;
+    height: 100%;
+
     .layout {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 100vh;
-      //background: url("../images/content/back_1.jpg") no-repeat center;
+      min-height: 100vh;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      //background-color: $bg-color;
 
       .background {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background-color: $bg-color;
         opacity: 90%;
         z-index: 1;
@@ -36,57 +34,59 @@ body {
 
       .content {
         flex-grow: 1;
-        padding: 100px 100px 50px 600px;
+        padding: 100px 100px 100px 600px;
         position: relative;
         z-index: 3;
-        .offer__item_info {
-          display: inline;
-          font-size: 2vh;
-          text-align: justify;
-          color: $extra-color;
 
-          .offer__item_info-title {
-            margin-bottom: 30px;
-            font-size: 2.5vb;
-            font-weight: bolder;
+        .offer {
+          .offer__item {
+            height: min-content;
+
+            .offer__item_info {
+              text-align: justify;
+              color: $extra-color;
+
+              .offer__item_info-title {
+                margin-bottom: 30px;
+                font-size: 2vb;
+                font-weight: bolder;
+              }
+
+              p {
+                font-size: 1.4vb;
+              }
+            }
           }
 
-          p:last-child {
-            margin-top: 20px;
-          }
-        }
+          .offer__desc {
+            font-size: 1.8vb;
+            color: $light-color;
 
-        .offer__desc {
-          font-size: 2.5vb;
-          color: $light-color;
+            p:first-child {
+              margin-bottom: 30px;
+              font-weight: bolder;
+            }
 
-          p:first-child {
-            font-size: 3vb;
-            margin-bottom: 50px;
-            font-weight: bolder;
-          }
+            span {
+              margin-right: 10px;
+            }
 
-          span {
-            margin-right: 10px;
-          }
-
-          .red {
-            color: $extra-color;
-            font-weight: bold;
+            .red {
+              color: $extra-color;
+              font-weight: bold;
+              text-transform: uppercase;
+            }
           }
         }
       }
 
-
-
-
       &.dark {
         .background {
-          position: absolute;
+          position: fixed;
           top: 0;
           left: 0;
           width: 100%;
-          height: 100vh;
+          height: 100%;
           background-color: #343434;
           opacity: 90%;
           z-index: 1;
@@ -112,15 +112,16 @@ body {
           .about {
             .anime-text {
               .typing {
-                color: #ad1414;
+                color: #ff5454;
               }
             }
 
             .anime-text-red {
-              margin-top: 100px;
-              @include sub-title;
-              color: #ad1414;
-              height: 40px;
+              span {
+                margin-top: 100px;
+                @include title40;
+                color: #ff5454;
+              }
             }
           }
 
@@ -152,7 +153,10 @@ body {
 
           .offer__item_info {
             .offer__item_info-title {
+              font-size: 2.2vb;
               color: $light-color;
+              margin-bottom: 30px;
+              font-weight: unset;
             }
 
             p {
@@ -160,40 +164,17 @@ body {
             }
           }
 
-          .offer__item_info {
-            display: inline;
-            font-size: 2vh;
-            text-align: justify;
-            color: #ad1414;
-
-            .offer__item_info-title {
-              margin-bottom: 30px;
-              font-size: 2.5vb;
-              font-weight: bolder;
-            }
-
-            p:last-child {
-              margin-top: 20px;
-            }
-          }
-
           .offer__desc {
-            font-size: 2.5vb;
+            font-size: 2vb;
             color: $light-color;
 
             p:first-child {
-              font-size: 3vb;
-              margin-bottom: 50px;
+              margin-bottom: 30px;
               font-weight: bolder;
             }
 
-            span {
-              margin-right: 10px;
-            }
-
             .red {
-              color: #ad1414;
-              font-weight: bold;
+              color: #ff5454;
             }
           }
         }
@@ -202,5 +183,791 @@ body {
   }
 }
 
+@media screen and (max-width: 1600px) {
+  body {
+    app-component {
+      .layout {
+        .content {
+          .offer {
+            .offer__item {
+              height: min-content;
 
+              .offer__item_info {
+                text-align: justify;
+                color: $extra-color;
 
+                .offer__item_info-title {
+                  margin-bottom: 30px;
+                  font-size: 1.8vb;
+                  font-weight: bolder;
+                }
+
+                p {
+                  font-size: 1.2vb;
+                }
+              }
+            }
+
+            .offer__desc {
+              font-size: 1.6vb;
+              color: $light-color;
+
+              p:first-child {
+                margin-bottom: 30px;
+                font-weight: bolder;
+              }
+
+              span {
+                margin-right: 10px;
+              }
+
+              .red {
+                color: $extra-color;
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+
+        &.dark {
+          .content {
+            .offer {
+              .offer__item {
+                height: min-content;
+
+                .offer__item_info {
+                  .offer__item_info-title {
+                    font-size: 2.2vb;
+                    color: $light-color;
+                    margin-bottom: 30px;
+                    font-weight: unset;
+                  }
+
+                  p {
+                    color: $bg-color;
+                  }
+                }
+              }
+
+              .offer__desc {
+                font-size: 2vb;
+                color: $light-color;
+
+                p:first-child {
+                  margin-bottom: 30px;
+                  font-weight: bolder;
+                }
+
+                .red {
+                  color: #ff5454;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  body {
+    app-component {
+      .layout {
+        .content {
+          padding: 50px 50px 50px 500px;
+
+          .offer {
+            .offer__item {
+              .offer__item_info {
+                .offer__item_info-title {
+                  font-size: 1.6vb;
+                }
+
+                p {
+                  font-size: 1.2vb;
+                }
+              }
+            }
+
+            .offer__desc {
+              font-size: 1.4vb;
+            }
+          }
+        }
+
+        &.dark {
+          .content {
+            .offer {
+              .offer__item {
+                height: min-content;
+
+                .offer__item_info {
+                  .offer__item_info-title {
+                    font-size: 1.6vb;
+                  }
+
+                  p {
+                    font-size: 1.2vb;
+                  }
+                }
+              }
+
+              .offer__desc {
+                font-size: 1.4vb;
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  body {
+    app-component {
+      .layout {
+        .content {
+          .offer {
+            .offer__item {
+              .offer__item_info {
+                .offer__item_info-title {
+                  margin-bottom: 20px;
+                  font-size: 1.8vb;
+                }
+
+                .offer__desc {
+                  font-size: 1.8vb;
+                }
+              }
+            }
+          }
+
+        }
+
+        &.dark {
+          .content {
+            .offer__item {
+              .offer__item_info {
+                .offer__item_info-title {
+                  margin-bottom: 20px;
+                  font-size: 1.8vb;
+                }
+
+                .offer__desc {
+                  font-size: 1.8vb;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  body {
+    app-component {
+      .layout {
+        .content {
+          padding: 50px 50px 50px 450px;
+
+          .offer {
+            .offer__item {
+              .offer__item_info {
+                .offer__item_info-title {
+
+                  font-size: 1.4vb;
+
+                }
+
+                p {
+                  font-size: 1vb;
+                }
+              }
+            }
+
+            .offer__desc {
+              font-size: 1.2vb;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    app-component {
+      .layout {
+        .content {
+          padding: 50px 50px 50px 50px;
+
+          .about {
+            .anime-text-red {
+              margin-top: 50px;
+            }
+          }
+
+          .offer {
+            .title {
+              font-size: 2.2vb;
+            }
+
+            .offer__item {
+              .offer__item_info {
+                .offer__item_info-title {
+
+                  font-size: 1.6vb;
+
+                }
+
+                p {
+                  font-size: 1.5vb;
+                }
+              }
+            }
+
+            .offer__desc {
+              font-size: 1.5vb;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  body {
+    app-component {
+      .layout {
+        .content {
+          padding: 30px;
+        }
+
+        &.dark {
+          .content {
+            .about {
+              .title {
+                font-size: 2vb;
+                margin-bottom: 30px;
+              }
+
+              .sub-title {
+                font-size: 1.8vb;
+                margin-bottom: 30px;
+              }
+
+              .anime-text {
+                font-size: 1.8vb;
+                margin-bottom: 30px;
+
+                .typing {
+                  font-size: 1.8vb;
+                }
+              }
+
+              .presentation__text {
+                font-size: 1.6vb;
+              }
+
+              .anime-text-red {
+                font-size: 1.6vb;
+              }
+            }
+
+            .offer {
+              .title {
+                margin-bottom: 30px;
+              }
+
+              .offer__item {
+                height: min-content;
+
+                .offer__item_info {
+
+                  .offer__item_info-title {
+                    margin-bottom: 20px;
+                    font-size: 1.6vb;
+                  }
+
+                  p {
+                    font-size: 1.4vb;
+                  }
+                }
+              }
+
+              .offer__desc {
+                font-size: 1.4vb;
+
+                p:first-child {
+                  margin-bottom: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    app-component {
+      .layout {
+        .content {
+          padding: 30px;
+
+          .offer {
+            .offer__item {
+              height: min-content;
+
+              .offer__item_info {
+
+                .offer__item_info-title {
+                  margin-bottom: 20px;
+                  font-size: 1.6vb;
+                }
+
+                p {
+                  font-size: 1.4vb;
+                }
+              }
+            }
+
+            .offer__desc {
+              font-size: 1.2vb;
+
+              p:first-child {
+                margin-bottom: 20px;
+              }
+            }
+          }
+        }
+
+        &.dark {
+          .content {
+            .about {
+              .presentation__text {
+                font-size: 1.5vb;
+              }
+
+              .anime-text-red {
+                span {
+                  font-size: 1.6vb;
+                }
+              }
+            }
+
+            .offer {
+              .title {
+                margin-bottom: 30px;
+              }
+
+              .offer__item {
+                height: min-content;
+
+                .offer__item_info {
+
+                  .offer__item_info-title {
+                    margin-bottom: 20px;
+                    font-size: 1.6vb;
+                  }
+
+                  p {
+                    font-size: 1.4vb;
+                  }
+                }
+              }
+
+              .offer__desc {
+                font-size: 1.4vb;
+
+                p:first-child {
+                  margin-bottom: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    app-component {
+      .layout {
+        .content {
+          padding: 20px;
+
+          .offer {
+            .offer__item {
+              .offer__item_info {
+                .offer__item_info-title {
+                  margin-bottom: 20px;
+                  font-size: 1.2vb;
+                }
+
+                p {
+                  font-size: 1.2vb;
+                }
+              }
+            }
+
+            .offer__desc {
+              font-size: 1.2vb;
+
+              p:first-child {
+                font-size: 1.2vb;
+              }
+
+            }
+
+          }
+        }
+
+        &.dark {
+          .content {
+            .about {
+              .title {
+                font-size: 1.8vb;
+              }
+
+              .sub-title {
+                font-size: 1.6vb;
+              }
+
+              .anime-text {
+                font-size: 1.5vb;
+
+                .typing {
+                  font-size: 1.5vb;
+                }
+              }
+
+              .presentation__text {
+                font-size: 1.5vb;
+              }
+
+              .anime-text-red {
+                font-size: 1.5vb;
+              }
+            }
+
+            .skills {
+              .title {
+                &:after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: -1em;
+                  width: 100%;
+                  height: 100%;
+                  background: linear-gradient(to right, rgba(187, 186, 186, 0), #2f2f2f, rgba(180, 177, 177, 0)) no-repeat -5em 0%;
+                  background-size: 2em 100%;
+                  transform: skewX(-50deg);
+                  z-index: 4;
+                }
+
+                &.hover:after {
+                  transition: 1s linear;
+                  background-position: 80% 20%;
+                }
+              }
+            }
+
+            .projects__item_title {
+              color: $bg-color;
+            }
+
+            .offer {
+              .offer__item {
+                .offer__item_info {
+                  .offer__item_info-title {
+                    margin-bottom: 20px;
+                    font-size: 1.2vb;
+                  }
+
+                  p {
+                    font-size: 1.2vb;
+                  }
+                }
+              }
+
+              .offer__desc {
+                font-size: 1.2vb;
+
+                p:first-child {
+                  font-size: 1.2vb;
+                }
+
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    app-component {
+      .layout {
+        .content {
+          .offer {
+            .title {
+              font-size: 1.6vb;
+            }
+
+            .offer__item {
+              .offer__item_info {
+                .offer__item_info-title {
+                  margin-bottom: 10px;
+                  font-size: 1.2vb;
+                }
+
+                p {
+                  font-size: 1vb;
+                }
+              }
+            }
+
+            .offer__desc {
+              font-size: 1vb;
+
+              p:first-child {
+                font-size: 1vb;
+              }
+
+            }
+
+          }
+        }
+
+        &.dark {
+          .content {
+            .about {
+              .title {
+                font-size: 1.6vb;
+                margin-bottom: 20px;
+              }
+
+              .sub-title {
+                font-size: 1.5vb;
+                margin-bottom: 20px;
+              }
+
+              .anime-text {
+                font-size: 1.5vb;
+                margin-bottom: 20px;
+
+                span {
+                  margin-right: 10px;
+                }
+
+                .typing {
+                  font-size: 1.4vb;
+                }
+              }
+
+              .presentation__text {
+                font-size: 1.3vb;
+              }
+
+              .anime-text-red {
+                span {
+                  font-size: 1.4vb;
+                }
+              }
+            }
+
+            .skills {
+              .title {
+                &:after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: -1em;
+                  width: 100%;
+                  height: 100%;
+                  background: linear-gradient(to right, rgba(187, 186, 186, 0), #2f2f2f, rgba(180, 177, 177, 0)) no-repeat -5em 0%;
+                  background-size: 2em 100%;
+                  transform: skewX(-50deg);
+                  z-index: 4;
+                }
+
+                &.hover:after {
+                  transition: 1s linear;
+                  background-position: 80% 20%;
+                }
+              }
+            }
+
+            .projects__item_title {
+              color: $bg-color;
+            }
+
+            .offer {
+              .title {
+                font-size: 1.6vb;
+              }
+
+              .offer__item {
+                .offer__item_info {
+                  .offer__item_info-title {
+                    margin-bottom: 10px;
+                    font-size: 1.2vb;
+                  }
+
+                  p {
+                    font-size: 1vb;
+                  }
+                }
+              }
+
+              .offer__desc {
+                font-size: 1vb;
+
+                p:first-child {
+                  font-size: 1vb;
+                }
+
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    app-component {
+      .layout {
+        .content {
+          //.offer {
+          //  .title{
+          //    font-size: 1.6vb;
+          //  }
+          //  .offer__item {
+          //    .offer__item_info {
+          //      .offer__item_info-title {
+          //        margin-bottom: 10px;
+          //        font-size: 1.2vb;
+          //      }
+          //
+          //      p {
+          //        font-size: 1vb;
+          //      }
+          //    }
+          //  }
+          //
+          //  .offer__desc {
+          //    font-size: 1vb;
+          //
+          //    p:first-child {
+          //      font-size: 1vb;
+          //    }
+          //
+          //  }
+          //
+          //}
+        }
+
+        &.dark {
+          .content {
+            .about {
+              .title {
+                font-size: 1.5vb;
+              }
+
+              .sub-title {
+                font-size: 1.4vb;
+              }
+
+              .anime-text {
+                font-size: 1.3vb;
+                margin-bottom: 30px;
+              }
+
+              .presentation__text {
+                font-size: 1.2vb;
+              }
+
+              .anime-text-red {
+                font-size: 1.3vb;
+              }
+            }
+
+            .skills {
+              .title {
+                &:after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: -1em;
+                  width: 100%;
+                  height: 100%;
+                  background: linear-gradient(to right, rgba(187, 186, 186, 0), #2f2f2f, rgba(180, 177, 177, 0)) no-repeat -5em 0%;
+                  background-size: 2em 100%;
+                  transform: skewX(-50deg);
+                  z-index: 4;
+                }
+
+                &.hover:after {
+                  transition: 1s linear;
+                  background-position: 80% 20%;
+                }
+              }
+            }
+
+            .projects__item_title {
+              color: $bg-color;
+            }
+
+            .offer {
+              .title {
+                font-size: 1.6vb;
+              }
+
+              .offer__item {
+                .offer__item_info {
+                  .offer__item_info-title {
+                    margin-bottom: 10px;
+                    font-size: 1.2vb;
+                  }
+
+                  p {
+                    font-size: 1vb;
+                  }
+                }
+              }
+
+              .offer__desc {
+                font-size: 1vb;
+
+                p:first-child {
+                  font-size: 1vb;
+                }
+
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

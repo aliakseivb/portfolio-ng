@@ -3,25 +3,25 @@
 
 
 .sidebar {
-  box-sizing: border-box;
-  margin-left: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50px;
   width: 450px;
   height: 100%;
   background: $common-color;
   padding-top: 3vb;
   z-index: 5;
   box-shadow: 0 0 11px 3px rgb(0 0 0 / 75%);
+
   .sidebar-top {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     .sidebar__image {
       position: relative;
       width: 70%;
@@ -35,7 +35,7 @@
 
     .slogan {
       position: relative;
-      top: -60px;
+      top: -3vb;
       font-family: Montserrat-SemiBold, sans-serif;
       font-size: 28px;
       text-align: center;
@@ -46,17 +46,17 @@
 
     .nav {
       width: 90%;
+      margin-top: 50px;
       margin-bottom: 100px;
 
       .nav__items {
-        padding: 50px 0 0 15px;
+        padding-left: 15px;
 
         .nav__item {
           list-style: none;
-          margin-bottom: 60px;
+          margin-bottom: 3vh;
           display: flex;
           align-items: center;
-          cursor: pointer;
           transition: all .3s ease-in-out;
           margin-left: -10px;
 
@@ -72,18 +72,23 @@
             transition: all .3s ease-in-out;
           }
 
-          &:hover {
-            margin-left: 0;
+          .nav__item_link {
+            cursor: pointer;
+            color: $text-color;
+            text-decoration: none;
+            font-family: Montserrat-SemiBold, sans-serif;
+            font-size: 1.5vb;
+            transition: all .3s ease-in-out;
 
+            &:hover {
+              color: $light-color;
+            }
+          }
+          &:has(.nav__item_link:hover){
+            margin-left: 0;
             &:before {
               margin-right: 20px;
               background: $light-color;
-            }
-
-            .nav__item_link {
-              color: $light-color;
-              font-family: Montserrat-SemiBold, sans-serif;
-              font-size: 28px;
             }
           }
 
@@ -97,21 +102,6 @@
 
             .nav__item_link {
               color: $light-color;
-              font-family: Montserrat-SemiBold, sans-serif;
-              font-size: 28px;
-              font-weight: bolder;
-            }
-          }
-
-          .nav__item_link {
-            color: $text-color;
-            text-decoration: none;
-            font-family: Montserrat-SemiBold, sans-serif;
-            font-size: 28px;
-            transition: all .3s ease-in-out;
-
-            &:hover {
-              color: $light-color;
             }
           }
         }
@@ -122,16 +112,17 @@
 
 
   .sidebar-down {
-    margin-bottom: 80px;
+    margin-bottom: 7vb;
     display: flex;
     justify-content: center;
+
     .sidebar__contacts {
       width: 80%;
 
       .sidebar__contacts_title {
         text-align: center;
         font-family: Montserrat-SemiBold, sans-serif;
-        font-size: 30px;
+        font-size: 1.6vb;
         letter-spacing: 10px;
         margin-bottom: 40px;
         color: $light-color;
@@ -156,6 +147,10 @@
             height: 100%;
             text-decoration: none;
 
+            svg {
+              width: 100%;
+              height: 100%;
+            }
           }
 
           &:hover .social-link svg {
@@ -169,5 +164,352 @@
       }
     }
   }
+}
 
+@media screen and (max-width: 1500px){
+  .sidebar {
+    width: 400px;
+    .sidebar-top {
+      .slogan {
+        font-size: 26px;
+      }
+      .nav {
+        .nav__items {
+          .nav__item {
+            .nav__item_link {
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+    .sidebar-down {
+      .sidebar__contacts {
+        .sidebar__contacts_title {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1250px){
+  .sidebar {
+    width: 350px;
+    .sidebar-top {
+      .slogan {
+        font-size: 22px;
+      }
+      .nav {
+        .nav__items {
+          .nav__item {
+            .nav__item_link {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+    .sidebar-down {
+      .sidebar__contacts {
+        .sidebar__contacts_title {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .sidebar {
+    top: 125px;
+    left: 0;
+    height: unset;
+    background: $common-color;
+    padding: 40px 0;
+    z-index: -1;
+    opacity: 0;
+    transition: .2s;
+    &.show {
+      z-index: 5;
+      opacity: 100;
+    }
+    .sidebar-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .sidebar__image {
+        display: none;
+      }
+
+      .slogan {
+        display: none;
+      }
+
+      .nav {
+        width: 90%;
+        margin-top: unset;
+        margin-bottom: 30px;
+
+        .nav__items {
+          padding-left: 15px;
+
+          //.nav__item {
+          //  list-style: none;
+          //  margin-bottom: 3vh;
+          //  display: flex;
+          //  align-items: center;
+          //  transition: all .3s ease-in-out;
+          //  margin-left: -10px;
+          //
+          //  &:before {
+          //    content: '';
+          //    display: block;
+          //    width: 10px;
+          //    min-width: 10px;
+          //    height: 10px;
+          //    border-radius: 50%;
+          //    background: transparent;
+          //    vertical-align: middle;
+          //    transition: all .3s ease-in-out;
+          //  }
+          //
+          //  .nav__item_link {
+          //    cursor: pointer;
+          //    color: $text-color;
+          //    text-decoration: none;
+          //    font-family: Montserrat-SemiBold, sans-serif;
+          //    font-size: 1.5vb;
+          //    transition: all .3s ease-in-out;
+          //
+          //    &:hover {
+          //      color: $light-color;
+          //    }
+          //  }
+          //  &:has(.nav__item_link:hover){
+          //    margin-left: 0;
+          //    &:before {
+          //      margin-right: 20px;
+          //      background: $light-color;
+          //    }
+          //  }
+          //
+          //  &.active {
+          //    margin-left: 0;
+          //
+          //    &:before {
+          //      background: $light-color;
+          //      margin-right: 20px;
+          //    }
+          //
+          //    .nav__item_link {
+          //      color: $light-color;
+          //    }
+          //  }
+          //}
+        }
+      }
+
+    }
+
+
+    .sidebar-down {
+      margin-bottom: unset;
+
+      .sidebar__contacts {
+
+        .sidebar__contacts_title {
+          display: none;
+        }
+
+        .sidebar__contacts_items {
+          //justify-content: space-around;
+
+          //.sidebar__contacts_item {
+          //  width: 40px;
+          //  height: 40px;
+          //
+          //  &:nth-child(2) {
+          //    margin: 0 40px;
+          //  }
+          //
+          //  .social-link {
+          //    display: inline-block;
+          //    width: 100%;
+          //    height: 100%;
+          //    text-decoration: none;
+          //
+          //    svg {
+          //      width: 100%;
+          //      height: 100%;
+          //    }
+          //  }
+          //
+          //  &:hover .social-link svg {
+          //    transform: scale(1.1, 1.1);
+          //
+          //    path {
+          //      fill: $light-color;
+          //    }
+          //  }
+          //}
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px){
+  .sidebar {
+    top: 190px;
+    left: 0;
+    height: unset;
+    background: $common-color;
+    padding: 40px 0;
+    z-index: -1;
+    opacity: 0;
+    transition: .2s;
+    &.show {
+      z-index: 5;
+      opacity: 100;
+    }
+    .sidebar-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .sidebar__image {
+        display: none;
+      }
+
+      .slogan {
+        display: none;
+      }
+
+      .nav {
+        width: 90%;
+        margin-top: unset;
+        margin-bottom: 30px;
+
+        .nav__items {
+          padding-left: 15px;
+
+          //.nav__item {
+          //  list-style: none;
+          //  margin-bottom: 3vh;
+          //  display: flex;
+          //  align-items: center;
+          //  transition: all .3s ease-in-out;
+          //  margin-left: -10px;
+          //
+          //  &:before {
+          //    content: '';
+          //    display: block;
+          //    width: 10px;
+          //    min-width: 10px;
+          //    height: 10px;
+          //    border-radius: 50%;
+          //    background: transparent;
+          //    vertical-align: middle;
+          //    transition: all .3s ease-in-out;
+          //  }
+          //
+          //  .nav__item_link {
+          //    cursor: pointer;
+          //    color: $text-color;
+          //    text-decoration: none;
+          //    font-family: Montserrat-SemiBold, sans-serif;
+          //    font-size: 1.5vb;
+          //    transition: all .3s ease-in-out;
+          //
+          //    &:hover {
+          //      color: $light-color;
+          //    }
+          //  }
+          //  &:has(.nav__item_link:hover){
+          //    margin-left: 0;
+          //    &:before {
+          //      margin-right: 20px;
+          //      background: $light-color;
+          //    }
+          //  }
+          //
+          //  &.active {
+          //    margin-left: 0;
+          //
+          //    &:before {
+          //      background: $light-color;
+          //      margin-right: 20px;
+          //    }
+          //
+          //    .nav__item_link {
+          //      color: $light-color;
+          //    }
+          //  }
+          //}
+        }
+      }
+
+    }
+
+
+    .sidebar-down {
+      margin-bottom: unset;
+
+      .sidebar__contacts {
+
+        .sidebar__contacts_title {
+          display: none;
+        }
+
+        .sidebar__contacts_items {
+          //justify-content: space-around;
+
+          //.sidebar__contacts_item {
+          //  width: 40px;
+          //  height: 40px;
+          //
+          //  &:nth-child(2) {
+          //    margin: 0 40px;
+          //  }
+          //
+          //  .social-link {
+          //    display: inline-block;
+          //    width: 100%;
+          //    height: 100%;
+          //    text-decoration: none;
+          //
+          //    svg {
+          //      width: 100%;
+          //      height: 100%;
+          //    }
+          //  }
+          //
+          //  &:hover .social-link svg {
+          //    transform: scale(1.1, 1.1);
+          //
+          //    path {
+          //      fill: $light-color;
+          //    }
+          //  }
+          //}
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px){
+  .sidebar {
+    top: 150px;
+    left: 0;
+  }
+}
+@media screen and (max-width: 417px){
+  .sidebar {
+    top: 210px;
+    left: 0;
+    width: 100%;
+  }
 }
