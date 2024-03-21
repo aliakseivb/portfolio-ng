@@ -83,14 +83,7 @@ body {
 
       &.dark {
         .background {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
           background-color: #343434;
-          opacity: 90%;
-          z-index: 1;
         }
 
         .header {
@@ -107,13 +100,13 @@ body {
 
         .content {
           .sub-title {
-            color: $bg-color;
+            color: #f72f2f;
           }
 
           .about {
             .anime-text {
               .typing {
-                color: #ff5454;
+                color: #f72f2f;
               }
             }
 
@@ -121,7 +114,7 @@ body {
               span {
                 margin-top: 100px;
                 @include title40;
-                color: #ff5454;
+                color: #f72f2f;
               }
             }
           }
@@ -155,7 +148,7 @@ body {
           .offer__item_info {
             .offer__item_info-title {
               font-size: 2.2vb;
-              color: $light-color;
+              color: #ff2121;
               margin-bottom: 30px;
               font-weight: unset;
             }
@@ -175,7 +168,7 @@ body {
             }
 
             .red {
-              color: #ff5454;
+              color: #ff2121;
             }
           }
         }
@@ -258,10 +251,6 @@ body {
                   margin-bottom: 30px;
                   font-weight: bolder;
                 }
-
-                .red {
-                  color: #ff5454;
-                }
               }
             }
           }
@@ -307,16 +296,13 @@ body {
                   .offer__item_info-title {
                     font-size: 1.6vb;
                   }
-
                   p {
                     font-size: 1.2vb;
                   }
                 }
               }
-
               .offer__desc {
                 font-size: 1.4vb;
-
               }
             }
           }
@@ -380,9 +366,7 @@ body {
             .offer__item {
               .offer__item_info {
                 .offer__item_info-title {
-
                   font-size: 1.4vb;
-
                 }
 
                 p {
@@ -422,9 +406,7 @@ body {
             .offer__item {
               .offer__item_info {
                 .offer__item_info-title {
-
                   font-size: 1.6vb;
-
                 }
 
                 p {
@@ -491,7 +473,6 @@ body {
                 height: min-content;
 
                 .offer__item_info {
-
                   .offer__item_info-title {
                     margin-bottom: 20px;
                     font-size: 1.6vb;
@@ -629,9 +610,7 @@ body {
               p:first-child {
                 font-size: 1.2vb;
               }
-
             }
-
           }
         }
 
@@ -709,9 +688,7 @@ body {
                 p:first-child {
                   font-size: 1.2vb;
                 }
-
               }
-
             }
           }
         }
@@ -749,9 +726,7 @@ body {
               p:first-child {
                 font-size: 1vb;
               }
-
             }
-
           }
         }
 
@@ -842,9 +817,7 @@ body {
                 p:first-child {
                   font-size: 1vb;
                 }
-
               }
-
             }
           }
         }
@@ -857,36 +830,6 @@ body {
   body {
     app-component {
       .layout {
-        .content {
-          //.offer {
-          //  .title{
-          //    font-size: 1.6vb;
-          //  }
-          //  .offer__item {
-          //    .offer__item_info {
-          //      .offer__item_info-title {
-          //        margin-bottom: 10px;
-          //        font-size: 1.2vb;
-          //      }
-          //
-          //      p {
-          //        font-size: 1vb;
-          //      }
-          //    }
-          //  }
-          //
-          //  .offer__desc {
-          //    font-size: 1vb;
-          //
-          //    p:first-child {
-          //      font-size: 1vb;
-          //    }
-          //
-          //  }
-          //
-          //}
-        }
-
         &.dark {
           .content {
             .about {
@@ -962,9 +905,7 @@ body {
                 p:first-child {
                   font-size: 1vb;
                 }
-
               }
-
             }
           }
         }
