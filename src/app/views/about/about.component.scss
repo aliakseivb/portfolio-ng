@@ -3,78 +3,88 @@
 
 .about {
   .title {
-    @include title50;
+    @include title28;
   }
 
   .sub-title {
-    @include title40;
-    margin-bottom: 50px;
+    @include title22;
+    margin-bottom: 10px;
   }
 
   .anime-text {
     display: flex;
     align-items: center;
-    @include title50;
+    @include title28;
+    margin-bottom: 40px;
 
     span {
-      margin-right: 20px;
+      margin-right: 10px;
     }
 
     .typing {
-      @include title40;
+      @include title22;
     }
   }
 
   .presentation__text {
     font-family: Montserrat-SemiBold, sans-serif;
-    font-size: 1.7vb;
+    font-size: 18px;
     color: $light-color;
     text-align: justify;
   }
+
   .anime-text-red {
     display: block;
-    margin-top: 100px;
-    @include title40;
+    margin-top: 50px;
+    @include title22;
     color: $extra-color;
     height: 40px;
   }
 }
 
-@media screen and (max-width: 1850px){
+@media screen and (max-width: 1850px) {
   .about {
-    .presentation__text {
-      font-size: 1.5vb;
-    }
-    .anime-text-red {
-      font-size: 1.9vb;
-    }
+    //.presentation__text {
+    //  font-size: 1.5vb;
+    //}
+    //.anime-text-red {
+    //  font-size: 1.9vb;
+    //}
   }
 }
 
-@media screen and (max-width: 1500px){
-  .about {
-    .anime-text-red {
-      font-size: 1.5vb;
-    }
-  }
+@media screen and (max-width: 1500px) {
+  //.about {
+  //  .anime-text-red {
+  //    font-size: 1.5vb;
+  //  }
+  //}
 }
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1400px) {
   .about {
     .title {
-      font-size: 2.2vb;
+      font-size: 26px;
     }
 
     .sub-title {
-      font-size: 1.8vb;
+      font-size: 20px;
     }
 
     .anime-text {
-      font-size: 2.2vb;
+      font-size: 20px;
+
+      .typing {
+        font-size: inherit;
+      }
     }
 
     .presentation__text {
-      font-size: 1.4vb;
+      font-size: 16px;
+    }
+
+    .typing {
+      font-size: 20px;
     }
   }
 }
@@ -82,100 +92,115 @@
 @media screen and (max-width: 1250px) {
   .about {
     .title {
-      font-size: 2vb;
+      font-size: 24px;
     }
 
     .sub-title {
-      font-size: 1.6vb;
+      font-size: 20px;
     }
 
     .anime-text {
-      font-size: 2vb;
-    }
-
-    .presentation__text {
-      font-size: 1.3vb;
-    }
-    .anime-text-red {
-      font-size: 1.4vb;
-    }
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .about {
-    .title {
-      font-size: 2vb;
-    }
-
-    .sub-title {
-      font-size: 1.8vb;
-    }
-
-    .anime-text {
-      font-size: 1.9vb;
+      font-size: 20px;
 
       .typing {
-        font-size: 1.8vb;
+        font-size: inherit;
       }
     }
 
     .presentation__text {
-      font-size: 1.7vb;
+      font-size: 16px;
     }
+
+    .typing {
+      font-size: 20px;
+    }
+
     .anime-text-red {
-      span{
-        font-size: 1.8vb;
-      }
+      font-size: 16px;
     }
   }
 }
 
-@media screen and (max-width: 850px) {
-  .about {
-    .title {
-      font-size: 2vb;
-    }
+//@media screen and (max-width: 1100px) {
+//  .about {
+//
+//    //.sub-title {
+//    //  font-size: 1.8vb;
+//    //}
+//    //
+//    //.anime-text {
+//    //  font-size: 1.9vb;
+//    //
+//    //  .typing {
+//    //    font-size: 1.8vb;
+//    //  }
+//    //}
+//    //
+//    //.presentation__text {
+//    //  font-size: 1.7vb;
+//    //}
+//    //
+//    //.anime-text-red {
+//    //  span {
+//    //    font-size: 1.8vb;
+//    //  }
+//    //}
+//  }
+//}
 
-    .sub-title {
-      font-size: 1.8vb;
-    }
-
-    .anime-text {
-      font-size: 1.8vb;
-    }
-
-    .presentation__text {
-      font-size: 1.7vb;
-    }
-    .anime-text-red {
-      font-size: 1.6vb;
-    }
-  }
-}
+//@media screen and (max-width: 850px) {
+//  .about {
+//    .title {
+//      font-size: 2vb;
+//    }
+//
+//    .sub-title {
+//      font-size: 1.8vb;
+//    }
+//
+//    .anime-text {
+//      font-size: 1.8vb;
+//    }
+//
+//    .presentation__text {
+//      font-size: 1.7vb;
+//    }
+//
+//    .anime-text-red {
+//      font-size: 1.6vb;
+//    }
+//  }
+//}
 
 @media screen and (max-width: 800px) {
   .about {
     .title {
-      font-size: 2vb;
-      margin-bottom: 30px;
+      font-size: 22px;
     }
 
     .sub-title {
-      font-size: 1.8vb;
-      margin-bottom: 30px;
+      font-size: 18px;
     }
 
     .anime-text {
-      font-size: 1.8vb;
-      margin-bottom: 30px;
+      font-size: 18px;
+
+      .typing {
+        font-size: inherit;
+      }
     }
 
     .presentation__text {
-      font-size: 1.6vb;
+      font-size: 16px;
+      margin-bottom: 30px;
     }
+
     .anime-text-red {
-      font-size: 1.6vb;
+      font-size: 16px;
+      margin-top: unset;
+      .typing {
+        font-size: inherit;
+      }
     }
   }
 }
@@ -183,27 +208,30 @@
 @media screen and (max-width: 600px) {
   .about {
     .title {
-      font-size: 1.8vb;
+      font-size: 20px;
     }
 
     .sub-title {
-      font-size: 1.6vb;
+      font-size: 16px;
     }
 
     .anime-text {
-      font-size: 1.5vb;
-
+      font-size: 16px;
       .typing {
-        font-size: 1.5vb;
+        font-size: inherit;
       }
     }
 
     .presentation__text {
-      font-size: 1.5vb;
+      font-size: 14px;
+      margin-bottom: 30px;
     }
 
     .anime-text-red {
-      font-size: 1.5vb;
+      font-size: 14px;
+      .typing {
+        font-size: inherit;
+      }
     }
   }
 }
@@ -211,33 +239,32 @@
 @media screen and (max-width: 500px) {
   .about {
     .title {
-      font-size: 1.6vb;
-      margin-bottom: 20px;
+      font-size: 18px;
+      margin-bottom: 10px;
     }
 
     .sub-title {
-      font-size: 1.5vb;
-      margin-bottom: 20px;
+      font-size: 14px;
+      margin-bottom: 10px;
     }
 
     .anime-text {
-      font-size: 1.5vb;
+      font-size: 14px;
       margin-bottom: 20px;
-      span {
-        margin-right: 10px;
-      }
-
       .typing {
-        font-size: 1.4vb;
+        font-size: inherit;
       }
     }
 
     .presentation__text {
-      font-size: 1.3vb;
+      font-size: 12px;
+      margin-bottom: 30px;
     }
+
     .anime-text-red {
-      span {
-        font-size: 1.4vb;
+      font-size: 12px;
+      .typing {
+        font-size: inherit;
       }
     }
   }
@@ -246,24 +273,32 @@
 @media screen and (max-width: 400px) {
   .about {
     .title {
-      font-size: 1.5vb;
+      font-size: 16px;
+      margin-bottom: 10px;
     }
 
     .sub-title {
-      font-size: 1.4vb;
+      font-size: 12px;
+      margin-bottom: 10px;
     }
 
     .anime-text {
-      font-size: 1.3vb;
-      margin-bottom: 30px;
+      font-size: 12px;
+      margin-bottom: 20px;
+      .typing {
+        font-size: inherit;
+      }
     }
 
     .presentation__text {
-      font-size: 1.2vb;
+      font-size: 10px;
+      margin-bottom: 30px;
     }
+
     .anime-text-red {
-      span {
-        font-size: 1.3vb;
+      font-size: 10px;
+      .typing {
+        font-size: inherit;
       }
     }
   }

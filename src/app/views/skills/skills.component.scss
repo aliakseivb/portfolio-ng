@@ -4,8 +4,9 @@
 .skills {
   .title {
     text-align: center;
-    @include title50;
+    @include title28;
     position: relative;
+    margin-bottom: 40px;
 
     &:after {
       content: "";
@@ -32,25 +33,30 @@
     //flex-wrap: wrap;
     //gap: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-auto-rows: auto;
     column-gap: 1%;
-    row-gap: 20px;
+    row-gap: 15px;
     //justify-content: flex-start;
     //justify-self: flex-start;
 
     .skills__item {
-      max-width: 100%;
+      //max-width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       border-radius: 5px;
-      padding: 10px;
+      //border: 1px solid #ffffff;
+      box-shadow: 0 0 1px 1px rgba( 0 0 0 / .8);
+      padding: 10px 0;
 
+      &:hover {
+        box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.8);
+      }
       .skills__item_image {
-        width: 80%;
-        margin-bottom: 20px;
+        width: 50%;
+        margin-bottom: 10px;
 
         .skills__item_img {
           width: 100%;
@@ -60,7 +66,7 @@
       .skills__desc {
         padding: 0 20px;
         font-family: Montserrat-Regular, sans-serif;
-        font-size: 22px;
+        font-size: 12px;
         color: rgba(255, 255, 255, 0.70);
         text-align: justify;
         display: flex;
@@ -70,14 +76,15 @@
       }
 
       .skills__more {
+        width: 90%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 5px;
         color: $extra-color;
         transition: .5s;
         font-family: Montserrat-Medium, sans-serif;
-        font-size: 18px;
+        font-size: 12px;
 
         &:hover {
           color: $light-color;
@@ -93,15 +100,7 @@
     .skills__items{
       .skills__item{
         .skills__desc {
-          padding: 0 20px;
-          font-family: Montserrat-Regular, sans-serif;
-          font-size: 22px;
           color: $bg-color;
-          text-align: justify;
-          display: flex;
-          align-items: flex-start;
-          transition: .3s linear;
-          flex-grow: 1;
         }
 
         .skills__more {
