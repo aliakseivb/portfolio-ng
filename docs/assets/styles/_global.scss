@@ -34,7 +34,7 @@ body {
 
       .content {
         flex-grow: 1;
-        padding: 100px 100px 100px 600px;
+        padding: 50px 70px 50px 350px;
         position: relative;
         z-index: 3;
 
@@ -48,19 +48,19 @@ body {
 
               .offer__item_info-title {
                 margin-bottom: 30px;
-                font-size: 2vb;
+                font-size: 20px;
                 font-weight: bolder;
               }
 
               p {
-                font-size: 1.4vb;
+                font-size: 18px;
                 color: $light-color;
               }
             }
           }
 
           .offer__desc {
-            font-size: 1.8vb;
+            font-size: 18px;
             color: $light-color;
 
             p:first-child {
@@ -265,7 +265,7 @@ body {
     app-component {
       .layout {
         .content {
-          padding: 50px 50px 50px 500px;
+          //padding: 50px 50px 50px 500px;
 
           .offer {
             .offer__item {
@@ -360,7 +360,7 @@ body {
     app-component {
       .layout {
         .content {
-          padding: 50px 50px 50px 450px;
+          //padding: 50px 50px 50px 450px;
 
           .offer {
             .offer__item {
@@ -391,12 +391,6 @@ body {
       .layout {
         .content {
           padding: 50px 50px 50px 50px;
-
-          .about {
-            .anime-text-red {
-              margin-top: 50px;
-            }
-          }
 
           .offer {
             .title {
