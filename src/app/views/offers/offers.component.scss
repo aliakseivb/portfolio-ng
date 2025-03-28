@@ -56,7 +56,6 @@
   .offer {
     .title {
       margin-bottom: 30px;
-      //font-size: ;
     }
 
     .offer__items {
@@ -70,11 +69,13 @@
 @media screen and (max-width: 600px) {
   .offer {
     .title {
-     font-size: 1.6vb;
+      font-size: 1.6vb;
     }
+
     .offer__items {
       gap: 30px;
       margin-bottom: 20px;
+
       .offer__item {
         .offer__item_image {
           width: 3vb;

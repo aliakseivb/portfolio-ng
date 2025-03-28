@@ -139,7 +139,6 @@
       justify-content: space-between;
       align-items: center;
       width: 60px;
-      //min-width: 100px;
       height: 30px;
       border-radius: 30px;
       padding: 5px 4px;
@@ -165,7 +164,6 @@
       .switch-circle {
         position: absolute;
         width: 30px;
-        //min-width: 50px;
         height: 100%;
         border-radius: 50%;
         background-color: #ffffff;
@@ -199,18 +197,6 @@
       }
     }
   }
-}
-
-@media screen and (max-width: 1500px) {
-  //.header {
-  //  padding: 50px 50px 50px 500px;
-  //}
-}
-
-@media screen and (max-width: 1250px) {
-  //.header {
-  //  padding: 50px 50px 50px 450px;
-  //}
 }
 
 @media screen and (max-width: 1100px) {
@@ -300,24 +286,6 @@
         height: 40px;
         border-radius: 20px;
         padding: 10px 9px;
-        border: 1px solid #ffffff;
-        box-sizing: border-box;
-
-        .time {
-          width: 20px;
-          height: 20px;
-          display: flex;
-          align-items: center;
-          border-radius: 50%;
-          cursor: pointer;
-          z-index: 2;
-
-          svg {
-            width: 100%;
-            max-height: 100%;
-            z-index: 1;
-          }
-        }
 
         .switch-circle {
           position: absolute;

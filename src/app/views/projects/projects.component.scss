@@ -40,7 +40,6 @@
 
         &:hover .projects__item_img {
           box-shadow: 0 0 12px 3px rgb(244 239 239);
-          //transform: scale(1.02, 1.02);
         }
 
         .projects__item_image {
@@ -63,6 +62,7 @@
     .title {
       font-size: 24px;
     }
+
     .projects__items {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -76,6 +76,7 @@
     .title {
       font-size: 22px;
     }
+
     .projects__items {
       .project__item_wrap {
         .projects__item {
@@ -111,6 +112,7 @@
     .title {
       font-size: 16px;
     }
+
     .projects__items {
       .project__item_wrap {
         .projects__item {

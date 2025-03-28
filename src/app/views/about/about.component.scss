@@ -42,25 +42,6 @@
   }
 }
 
-@media screen and (max-width: 1850px) {
-  .about {
-    //.presentation__text {
-    //  font-size: 1.5vb;
-    //}
-    //.anime-text-red {
-    //  font-size: 1.9vb;
-    //}
-  }
-}
-
-@media screen and (max-width: 1500px) {
-  //.about {
-  //  .anime-text-red {
-  //    font-size: 1.5vb;
-  //  }
-  //}
-}
-
 @media screen and (max-width: 1400px) {
   .about {
     .title {
@@ -121,57 +102,6 @@
   }
 }
 
-//@media screen and (max-width: 1100px) {
-//  .about {
-//
-//    //.sub-title {
-//    //  font-size: 1.8vb;
-//    //}
-//    //
-//    //.anime-text {
-//    //  font-size: 1.9vb;
-//    //
-//    //  .typing {
-//    //    font-size: 1.8vb;
-//    //  }
-//    //}
-//    //
-//    //.presentation__text {
-//    //  font-size: 1.7vb;
-//    //}
-//    //
-//    //.anime-text-red {
-//    //  span {
-//    //    font-size: 1.8vb;
-//    //  }
-//    //}
-//  }
-//}
-
-//@media screen and (max-width: 850px) {
-//  .about {
-//    .title {
-//      font-size: 2vb;
-//    }
-//
-//    .sub-title {
-//      font-size: 1.8vb;
-//    }
-//
-//    .anime-text {
-//      font-size: 1.8vb;
-//    }
-//
-//    .presentation__text {
-//      font-size: 1.7vb;
-//    }
-//
-//    .anime-text-red {
-//      font-size: 1.6vb;
-//    }
-//  }
-//}
-
 @media screen and (max-width: 800px) {
   .about {
     .title {
@@ -198,6 +128,7 @@
     .anime-text-red {
       font-size: 16px;
       margin-top: unset;
+
       .typing {
         font-size: inherit;
       }
@@ -217,6 +148,7 @@
 
     .anime-text {
       font-size: 16px;
+
       .typing {
         font-size: inherit;
       }
@@ -229,6 +161,7 @@
 
     .anime-text-red {
       font-size: 14px;
+
       .typing {
         font-size: inherit;
       }
@@ -251,6 +184,7 @@
     .anime-text {
       font-size: 14px;
       margin-bottom: 20px;
+
       .typing {
         font-size: inherit;
       }
@@ -263,6 +197,7 @@
 
     .anime-text-red {
       font-size: 12px;
+
       .typing {
         font-size: inherit;
       }
@@ -285,6 +220,7 @@
     .anime-text {
       font-size: 12px;
       margin-bottom: 20px;
+
       .typing {
         font-size: inherit;
       }
@@ -297,6 +233,7 @@
 
     .anime-text-red {
       font-size: 10px;
+
       .typing {
         font-size: inherit;
       }
